@@ -1,0 +1,12 @@
+
+#form fieldset {
+ display: flex;
+}
+
+#form fieldset {
+  flex-direction: column;
+}
+
+#form {
+  max-width: 300px;
+}
