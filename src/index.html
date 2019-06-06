@@ -18,22 +18,22 @@
 
       <fieldset>
         <label for="journalDate">Date of Entry: </label>
-        <input type="date" name="journalDate" id="journalDate" />
+        <input type="date" name="journalDate" id="date" />
       </fieldset>
 
       <fieldset>
         <label for="journalConcepts">Concepts Covered: </label>
-        <input type="text" name="journalConcepts" id="journalConcepts" />
+        <input type="text" name="journalConcepts" id="concepts" />
       </fieldset>
 
       <fieldset>
         <label for="journalEntry">Journal Entry: </label>
-        <textarea name="journalEntry" id="journalEntry"></textarea>
+        <textarea name="journalEntry" id="entry"></textarea>
       </fieldset>
 
       <fieldset>
         <label for="journalMood">Mood for the Day:</label>
-        <select name="journalMood">
+        <select name="journalMood" id="mood">
           <option>Overwhelmed</option>
           <option>Got some of it</option>
           <option>Got most of it</option>
@@ -41,11 +41,13 @@
         </select>
       </fieldset>
 
-      <button type="submit" id="submitEntry">Record Journal Entry</button>
+      <button id="submitEntry">Record Journal Entry</button>
 
       </fieldset>
 
     </form>
+
+    <article id="entryLog"></article>
 
   </div>
 
