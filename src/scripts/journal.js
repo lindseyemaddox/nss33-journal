@@ -5,17 +5,16 @@ let output = document.getElementById("output");
 
 function addJournalEntry(entryObject) {
   entries.push(entryObject);
-  console.log("entries", entries);
-  buildTheDom();
+  // buildTheDom();
 }
 
-let buildTheDom = () => {
-  output.innerHTML = "";
-  for (var i = 0; i < entries.length; i++) {
-    let journalEntry = entries[i];
-    output.innerHTML += entryComponent(journalEntry);
-  }
-};
+// let buildTheDom = () => {
+//   output.innerHTML = "";
+//   for (var i = 0; i < entries.length; i++) {
+//     let journalEntry = entries[i];
+//     output.innerHTML += entryComponent(journalEntry);
+//   }
+// };
 
 let entryComponent = (journalEntry) => {
   return `
@@ -43,3 +42,14 @@ function collectEntryItems() {
 submit.addEventListener("click", function () {
   collectEntryItems();
 });
+
+
+fetch("http://localhost:3000/entries") // Fetch from the API
+  .then(response => response.json() // Parse as JSON
+  .then(entries => {
+    output.innerHTML = "";
+    for (var i = 0; i < entries.length; i++) {
+      let journalEntry = entries[i];
+      output.innerHTML += entryComponent(journalEntry);
+    }
+}));
