@@ -17,37 +17,34 @@
     <form>
 
       <fieldset>
-        <label for="journalDate">Date of Entry: </label>
-        <input type="date" name="journalDate" id="journalDate" />
+        <label>date</label>
+        <input id="date" type="date" placeholder="date">
       </fieldset>
-
+  
       <fieldset>
-        <label for="journalConcepts">Concepts Covered: </label>
-        <input type="text" name="journalConcepts" id="journalConcepts" />
+        <label for="concepts">concepts covered / entry title</label>
+        <input id="concepts" type="text" placeholder="concepts covered">
       </fieldset>
-
+  
       <fieldset>
-        <label for="journalEntry">Journal Entry: </label>
-        <textarea name="journalEntry" id="journalEntry"></textarea>
+        <label>entry</label>
+        <textarea id="entry">Deep Thoughts</textarea>
       </fieldset>
-
+  
       <fieldset>
-        <label for="journalMood">Mood for the Day:</label>
-        <select name="journalMood">
-          <option>Overwhelmed</option>
-          <option>Got some of it</option>
-          <option>Got most of it</option>
-          <option>On top of it</option>
+        <select id="mood">
+          <option>gettin it</option>
+          <option>missin it</option>
         </select>
       </fieldset>
-
-      <button type="submit" id="submitEntry">Record Journal Entry</button>
-
-      </fieldset>
-
+  
+      <button id="submit" type="button">Submit Entry</button>
+  
     </form>
-
-  </div>
+  
+    <hr />
+  
+    <div id="output"></div>
 
   <script type="text/javascript" src="scripts/journal.js"></script>
 
