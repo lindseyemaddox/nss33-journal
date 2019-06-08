@@ -10,3 +10,6 @@
 
 #### Part Five Objective
 ##### Modularize the JavaScript. Create several JavaScript files which each have a single responsibility. Then you will need to include them in your index.html in the correct order.
+
+#### Part Six Objectives
+##### Apply event listeners and querying the DOM to make daily journal form save entries to API. Also use fetch to make a POST request to your API, while using a factory function to generate the object that will be saved.

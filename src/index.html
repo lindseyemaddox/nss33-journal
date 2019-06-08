@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
   <h1>Daily Journal</h1>
 
   <div id="form">
@@ -18,21 +19,21 @@
 
       <fieldset>
         <label>date</label>
-        <input id="date" type="date" placeholder="date">
+        <input id="date" type="date" placeholder="date" required>
       </fieldset>
   
       <fieldset>
         <label for="concepts">concepts covered / entry title</label>
-        <input id="concepts" type="text" placeholder="concepts covered">
+        <input id="concepts" type="text" placeholder="concepts covered" required>
       </fieldset>
   
       <fieldset>
         <label>entry</label>
-        <textarea id="entry"></textarea>
+        <textarea id="entry" required pattern="[a-zA-Z][a-zA-Z0-9-_.]{60,} " title="Sixty or more characters"></textarea>
       </fieldset>
   
       <fieldset>
-        <select id="mood">
+        <select id="mood" required>
           <option>rare</option>
           <option>medium</option>
           <option>medium-well</option>
@@ -40,14 +41,15 @@
         </select>
       </fieldset>
   
-      <button id="submit" type="button">Submit Entry</button>
+      <button id="submit" type="button">Record Journal Entry</button>
   
     </form>
-  
-    <hr />
-  
-    <div id="output"></div>
 
+  </div>
+  
+  <div id="output"></div>
+
+  <script type="text/javascript" src="scripts/journal.js"></script>
   <script type="text/javascript" src="scripts/data.js"></script>
   <script type="text/javascript" src="scripts/entryComponent.js"></script>
   <script type="text/javascript" src="scripts/entriesDOM.js"></script>

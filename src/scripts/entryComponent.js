@@ -10,4 +10,3 @@ let entryComponent = (journalEntry) => {
     </div>
   `;
 };
-

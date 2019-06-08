@@ -1,13 +1,6 @@
 // code that is responsible for modifying the DOM
 
-// let submit = document.getElementById("submit");
-
-// submit.addEventListener("click", function () {
-//   collectEntryItems();
-// });
-
 let output = document.getElementById("output");
-
 
 getEntries().then(entries => {
   output.innerHTML = "";
@@ -16,3 +9,6 @@ getEntries().then(entries => {
     output.innerHTML += entryComponent(journalEntry);
   }
 });
+
+
+
